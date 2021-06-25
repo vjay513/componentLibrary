@@ -1,2 +1,0 @@
-# componentLibrary
-Angular concepts 

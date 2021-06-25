@@ -1,0 +1,18 @@
+.header {
+  background: #000000bd;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: oblique;
+  font-variant-caps: unicase;
+  font-family: monospace;
+  stroke-linecap: round;
+  border: 2px dotted #0a0a0a;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  color: #fff;
+  text-decoration-color: aqua;
+  text-decoration: underline;
+}
+

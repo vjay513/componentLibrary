@@ -1,0 +1,223 @@
+<section class="annual-wellness" fxLayout="column" fxLayoutAlign="start start">
+  <p class="annual-wellness__title">Health Risk Assessment</p>
+  <h1 class="annual-wellness__page-title" *ngIf="pageNumber === 0">
+    Please provide information about your lifestyle and health.
+  </h1>
+  <!-- Progrees bar -->
+  <div
+    class="annual-wellness-progressbar"
+    fxLayout="column"
+    fxLayoutAlign="start start"
+  >
+    <mat-progress-bar
+      mode="determinate"
+      [value]="progressBarValue"
+    ></mat-progress-bar>
+    <p class="annual-wellness-progressbar__text">
+      {{ progressBarValue }}% Complete
+    </p>
+  </div>
+
+  <!-- Form -->
+  <form
+    class="annual-wellness-form"
+    [formGroup]="annualWellnessForm"
+    autocomplete="off"
+  >
+    <ng-container *ngFor="let question of eachQuestion.Questions">
+      <!-- Radio buttons -->
+      <div *ngIf="question.QuestionType === 'RadioButton'">
+        <!-- Horizontal/vertical radio buttons display with stepper -->
+        <mat-radio-group
+          class="annual-wellness-form__field"
+          [ngClass]="
+            question.Orientation === 'horizontal' && question.StepperLine
+              ? 'annual-wellness-form__radio-horizontal'
+              : 'annual-wellness-form__radio-vertical'
+          "
+          fxLayout="column"
+          formControlName="{{ question.Id }}"
+          aria-label="Select an option"
+        >
+          <labeL
+            class="annual-wellness-form__radio-question"
+            *ngIf="question.GroupLabel"
+            >{{ question.GroupLabel }}</labeL
+          >
+          <labeL
+            class="annual-wellness-form__radio-question"
+            *ngIf="question.Label"
+            >{{ question.Label }}</labeL
+          >
+          <div
+            [ngClass]="
+              question.Orientation === 'horizontal' && question.StepperLine
+                ? 'horizontal'
+                : 'vertical'
+            "
+          >
+            <div [ngClass]="question.SubLabel ? 'sub-label' : 'no-sub-label'">
+              <div class="sub-label-container" fxLayout="row">
+                <div *ngIf="question.SubLabel" class="sub-label-text">
+                  {{ question.SubLabel }}
+                </div>
+                <mat-icon
+                  class="annual-wellness-form__icon icon-infocircle"
+                  *ngIf="question.toolTip"
+                  (mouseover)="showToolTip = true"
+                  (mouseout)="showToolTip = false"
+                >
+                </mat-icon>
+                <div
+                  *ngIf="showToolTip && question.toolTip"
+                  class="annual-wellness-form__tooltip"
+                >
+                  {{ question.toolTip }}
+                </div>
+              </div>
+            </div>
+            <div
+              [ngClass]="question.SubLabel ? 'sub-label-Align' : ''"
+              class="each-option"
+              *ngFor="let option of question.PossibleAnswers"
+            >
+              <!--- Common Radio Button -->
+              <mat-radio-button
+                color="primary"
+                value="{{ option.AnswerString }}"
+                (change)="radioChange($event, question)"
+              >
+              </mat-radio-button>
+              <!-- Vertical lines and default vertical -->
+              <div
+                [ngClass]="
+                  question.StepperLine
+                    ? 'label-radio'
+                    : 'annual-wellness-form__radio-option'
+                "
+                *ngIf="
+                  !question.StepperLine || question.Orientation !== 'horizontal'
+                "
+              >
+                <label class="label-text">{{ option.AnswerString }}</label>
+              </div>
+              <!-- Horizontal lines -->
+              <div
+                class="label-radio"
+                *ngIf="question.Orientation === 'horizontal'"
+              ></div>
+              <div
+                class="label-text"
+                *ngIf="question.Orientation === 'horizontal'"
+              >
+                {{ option.AnswerString }}
+              </div>
+            </div>
+          </div>
+        </mat-radio-group>
+
+        <!-- Dynamic questions horizontal/vertical radio buttons display with stepper-->
+        <div
+          *ngFor="let subQuestion of question.responsive"
+          class="annual-wellness-form__dynamic-Question"
+        >
+          <mat-radio-group
+            *ngIf="dynamicQuestions.indexOf(subQuestion.Question.Id) > -1"
+            class="annual-wellness-form__field"
+            formControlName="{{ subQuestion.Question.Id }}"
+            [ngClass]="
+              subQuestion.Question.Orientation === 'horizontal'
+                ? 'annual-wellness-form__radio-horizontal'
+                : 'annual-wellness-form__radio-vertical'
+            "
+            fxLayout="column"
+            aria-label="Select an option"
+          >
+            <labeL class="annual-wellness-form__radio-question">{{
+              subQuestion.Question.Label
+            }}</labeL>
+            <div
+              [ngClass]="
+                subQuestion.Question.Orientation === 'horizontal'
+                  ? 'horizontal'
+                  : 'vertical'
+              "
+            >
+              <div
+                class="each-option"
+                *ngFor="let option of subQuestion.Question.PossibleAnswers"
+              >
+                <mat-radio-button
+                  color="primary"
+                  value="{{ option.AnswerString }}"
+                  (change)="radioChange($event, option)"
+                >
+                </mat-radio-button>
+                <div
+                  class="label-radio"
+                  *ngIf="subQuestion.Question.Orientation !== 'horizontal'"
+                >
+                  <label class="label-text">{{ option.AnswerString }}</label>
+                </div>
+                <div
+                  class="label-radio"
+                  *ngIf="subQuestion.Question.Orientation === 'horizontal'"
+                ></div>
+                <div
+                  class="label-text"
+                  *ngIf="subQuestion.Question.Orientation === 'horizontal'"
+                >
+                  {{ option.AnswerString }}
+                </div>
+              </div>
+            </div>
+          </mat-radio-group>
+        </div>
+      </div>
+      <!-- Checkbox -->
+      <ul *ngIf="question.QuestionType === 'Checkbox'">
+        <div class="checkbox-question">{{ question.GroupLabel }}</div>
+        <div fxLayout fxLayoutAlign="left" fxLayoutGap="10px">
+          <li class="list-check">
+            <mat-checkbox color="primary" [value]="question.Label">
+              <label>{{ question.Label }}</label>
+            </mat-checkbox>
+          </li>
+        </div>
+      </ul>
+    </ng-container>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer class="ck-footer">
+  <div
+    fxLayout="row"
+    fxLayout.lt-sm="column"
+    fxLayoutGap.lt-sm="16px"
+    fxLayoutAlign="space-between center"
+  >
+    <div class="footer-column" fxFlexOrder.lt-sm="2">
+      <button
+        mat-raised-button
+        color="primary"
+        class="ck-footer__previous"
+        id="annual_Previous_btn"
+        (click)="onPrevious()"
+      >
+        <span class="ck-footer__button-text">Previous</span>
+      </button>
+    </div>
+    <div class="footer-column" fxFlexOrder.lt-sm="1">
+      <button
+        mat-raised-button
+        color="warn"
+        class="ck-footer__next"
+        id="annual_Next_btn"
+        (click)="onNext()"
+      >
+        <span class="ck-footer__button-text">Next</span>
+      </button>
+    </div>
+  </div>
+</footer>
