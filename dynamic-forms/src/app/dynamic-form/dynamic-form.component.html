@@ -175,11 +175,11 @@
         </div>
       </div>
       <!-- Checkbox -->
-      <ul *ngIf="question.QuestionType === 'Checkbox'">
+      <ul *ngIf="question.QuestionType === 'Checkbox'" formGroupName="checkBoxQuestions{{pageNumber}}">
         <div class="checkbox-question">{{ question.GroupLabel }}</div>
         <div fxLayout fxLayoutAlign="left" fxLayoutGap="10px">
           <li class="list-check">
-            <mat-checkbox color="primary" [value]="question.Label">
+            <mat-checkbox color="primary" [value]="question.Label" formControlName="{{question.Id}}">
               <label>{{ question.Label }}</label>
             </mat-checkbox>
           </li>

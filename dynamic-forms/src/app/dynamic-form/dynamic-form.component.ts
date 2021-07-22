@@ -1,8 +1,8 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 
-import {questions} from './questionnaire';
+import { questions } from './questionnaire';
 
 @Component({
   selector: 'app-dynamic-form',
@@ -12,7 +12,7 @@ import {questions} from './questionnaire';
 export class DynamicFormComponent implements OnInit {
   hraQuestionnaire = questions;
   eachQuestion: any;
-  pageNumber = 0;
+  pageNumber = 7;
   dynamicQuestions = [];
   hraQuesPagesLength = 0;
   totalPages = 0;
@@ -23,36 +23,78 @@ export class DynamicFormComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder
-  ) {}
+  ) { }
 
   ngOnInit() {
-   this.fetchParams()
+    this.fetchParams()
   }
 
   fetchParams() {
-      this.dynamicQuestions = [];
-      this.eachQuestion = this.hraQuestionnaire.HealthyQuestHRAScript.Pages[this.pageNumber];
-      this.groupingLabels();
-      this.buildForm();
-      this.changesOnSpecificQuestion();
-      this.progressBarCalc();
-      this.totalPages = this.hraQuestionnaire.HealthyQuestHRAScript.Pages.length-1;
+    this.dynamicQuestions = [];
+    this.eachQuestion = this.hraQuestionnaire.HealthyQuestHRAScript.Pages[this.pageNumber];
+    this.groupingLabels();
+    this.buildForm();
+    this.changesOnSpecificQuestion();
+    this.progressBarCalc();
+    this.totalPages = this.hraQuestionnaire.HealthyQuestHRAScript.Pages.length - 1;
   }
 
   changesOnSpecificQuestion() {
-    if (this.eachQuestion.Questions[0].Id === '1019') {
-      this.questionDeposit = this.eachQuestion.Questions.slice(1, this.eachQuestion.Questions.length);
-      this.eachQuestion.Questions = this.eachQuestion.Questions.slice(0, 1);
+    const multiLevelQue = this.eachQuestion.Questions.find(elem => elem.responsive && elem.responsive[0].Question.responsive);
+    if (multiLevelQue) {
+      this.questionDeposit = multiLevelQue.responsive[0].Question.responsive[0].Questions;
     }
   }
 
   buildForm() {
     this.eachQuestion.Questions.forEach(que => {
+      if (que.QuestionType !== 'RadioButton') {
+        return;
+      }
       this.annualWellnessForm.addControl(que.Id, this.fb.control('', Validators.required));
       if (que.responsive) {
         que.responsive.forEach(subQue => {
           this.annualWellnessForm.addControl(subQue.Question.Id, this.fb.control('', Validators.required));
         });
+      }
+    });
+    this.addCheckBoxControls();
+  }
+
+  test(control) {
+    const form:any = this.annualWellnessForm.get('checkBoxQuestions' + this.pageNumber);
+    if (control.value) {
+      form.reset()
+      form.controls[this.lastPivot()].setValue(true)
+    }
+
+    return null;
+  }
+
+
+  lastPivot() {
+    let pivot = 0;
+    this.eachQuestion.Questions.forEach(que => {
+      if (que.QuestionType === 'Checkbox') {
+        pivot = que.Id
+      }
+    });
+    return pivot;
+  }
+
+  addCheckBoxControls() {
+    this.annualWellnessForm.addControl('checkBoxQuestions' + this.pageNumber, new FormGroup({}));
+    const checkBoxQuestionsGroup: any = this.annualWellnessForm.get('checkBoxQuestions' + this.pageNumber) as FormGroup;
+
+    this.eachQuestion.Questions.forEach(que => {
+      if (que.QuestionType === 'Checkbox') {
+        console.log(this.lastPivot())
+        if (que.Id === this.lastPivot()) {
+          checkBoxQuestionsGroup.addControl(que.Id, new FormControl('', [this.test.bind(this)]));
+        } else {
+          checkBoxQuestionsGroup.addControl(que.Id, new FormControl('', []));
+        }
+
       }
     });
   }
@@ -71,6 +113,7 @@ export class DynamicFormComponent implements OnInit {
     if (options.includes(option.AnswerString)) {
       this.eachQuestion.Questions = [...this.eachQuestion.Questions, ...this.questionDeposit];
     }
+    this.buildForm();
   }
 
   specificControlReset(controlId) {
@@ -95,10 +138,6 @@ export class DynamicFormComponent implements OnInit {
       this.eachQuestion.Questions = [this.eachQuestion.Questions[0]];
       return;
     }
-    this.specificControlReset(question.responsive[0].Question.Id);
-    this.questionDeposit.forEach(que => {
-      this.specificControlReset(que.Id);
-    });
     this.dynamicQuestions.push(question.responsive[0].Question.Id);
   }
 
@@ -144,4 +183,4 @@ export class DynamicFormComponent implements OnInit {
     console.log(this.pageNumber)
     this.fetchParams();
   }
-  }
+}

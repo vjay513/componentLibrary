@@ -8,11 +8,13 @@ import { MaterialModule } from './material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { FlexLayoutComponent } from './flex-layout/flex-layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DynamicFormComponent
+    DynamicFormComponent,
+    FlexLayoutComponent
   ],
   imports: [
     BrowserModule,

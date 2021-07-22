@@ -155,58 +155,12 @@ const questions = {
             ],
             "GroupLabel": "",
             "FieldLabel": "Pounds",
-            "Label": "What is your recent measured weight to the nearest digit?",
+            "Label": "What is your most recent measured weight to the nearest digit?",
             "Index": 3,
             "QuestionType": "Numeric"
           },
           {
             "Id": "1003",
-            "display": false,
-            "Orientation": "vertical",
-            "ParentQuestionId": "",
-            "ParentAnswerId": "",
-            "SuggestedText": "Calculated",
-            "QuestionGroupId": "",
-            "AdditionalText": "Range: 0-150",
-            "QuestionOrder": 4,
-            "PossibleAnswers": [
-              {
-                "Id": "143",
-                "AnswerRange": "0-25",
-                "AnswerIndex": 0,
-                "AnswerTag": "143",
-                "AnswerType": "REPORTING_HRA_ANSWER_ID"
-              },
-              {
-                "Id": "144",
-                "AnswerRange": "25-30",
-                "AnswerIndex": 1,
-                "AnswerTag": "Weight_10_BMI",
-                "AnswerType": "HQ_DEBIT"
-              },
-              {
-                "Id": "145",
-                "AnswerString": "30-35",
-                "AnswerIndex": 2,
-                "AnswerTag": "Weight_15_BMI",
-                "AnswerType": "HQ_DEBIT"
-              },
-              {
-                "Id": "146",
-                "AnswerString": "35-150",
-                "AnswerIndex": 3,
-                "AnswerTag": "Weight_20_BMI",
-                "AnswerType": "HQ_DEBIT"
-              }
-            ],
-            "Validators": [],
-            "GroupLabel": "",
-            "Label": "Calculated BMI",
-            "Index": 4,
-            "QuestionType": "Calculated"
-          },
-          {
-            "Id": "1004",
             "display": true,
             "Orientation": "vertical",
             "StepperLine": false,
@@ -215,7 +169,7 @@ const questions = {
             "SuggestedText": "Select",
             "QuestionGroupId": "",
             "AdditionalText": "",
-            "QuestionOrder": 5,
+            "QuestionOrder": 4,
             "PossibleAnswers": [
               {
                 "Id": "147",
@@ -235,21 +189,21 @@ const questions = {
             "Validators": [],
             "GroupLabel": "",
             "Label": "Do you know the exact value of your most recently measured blood pressure?",
-            "Index": 5,
+            "Index": 4,
             "QuestionType": "RadioButton",
             "responsive": [
               {
                 "relatedAnswer": "Yes",
                 "Question": {
-                  "Id": "1005",
+                  "Id": "1004",
                   "display": true,
                   "Orientation": "horizontal",
-                  "ParentQuestionId": "1004",
+                  "ParentQuestionId": "1003",
                   "ParentAnswerId": "147",
                   "SuggestedText": "Enter",
                   "QuestionGroupId": "1",
                   "AdditionalText": "Range: 20-280",
-                  "QuestionOrder": 6,
+                  "QuestionOrder": 5,
                   "PossibleAnswers": [
                     {
                       "Id": "149",
@@ -321,24 +275,25 @@ const questions = {
                     }
                   ],
                   "GroupLabel": "",
-                  "Label": "What was the exact value of your most recently measured blood pressure?",
-                  "Index": 6,
+                  "Label": "What is the exact value of your most recently measured blood pressure?",
+                  "FieldLabel": ["Systolic value (top)", "Diastolic value (bottom)"],
+                  "Index": 5,
                   "QuestionType": "Numeric"
                 }
               },
               {
                 "relatedAnswer": "No",
                 "Question": {
-                  "Id": "1007",
+                  "Id": "1005",
                   "display": false,
                   "Orientation": "vertical",
                   "StepperLine": true,
-                  "ParentQuestionId": "1004",
+                  "ParentQuestionId": "1003",
                   "ParentAnswerId": "148",
                   "SuggestedText": "Select",
                   "QuestionGroupId": "",
                   "AdditionalText": "",
-                  "QuestionOrder": 8,
+                  "QuestionOrder": 6,
                   "PossibleAnswers": [
                     {
                       "Id": "155",
@@ -379,7 +334,7 @@ const questions = {
                   "Validators": [],
                   "GroupLabel": "",
                   "Label": "What is the range you believe best represents your blood pressure?",
-                  "Index": 8,
+                  "Index": 6,
                   "QuestionType": "RadioButton"
                 }
               }
@@ -390,7 +345,7 @@ const questions = {
       {
         "Questions": [
           {
-            "Id": "1008",
+            "Id": "1006",
             "Orientation": "vertical",
             "StepperLine": false,
             "ParentQuestionId": "",
@@ -398,7 +353,7 @@ const questions = {
             "SuggestedText": "Select",
             "QuestionGroupId": "",
             "AdditionalText": "",
-            "QuestionOrder": 9,
+            "QuestionOrder": 7,
             "PossibleAnswers": [
               {
                 "Id": "160",
@@ -418,19 +373,19 @@ const questions = {
             "Validators": [],
             "GroupLabel": "",
             "Label": "Do you know the exact value of your most recently measured total cholesterol?",
-            "Index": 9,
+            "Index": 7,
             "QuestionType": "RadioButton",
             "responsive": [
               {
                 "relatedAnswer": "Yes",
                 "Question": {
-                  "Id": "1009",
-                  "ParentQuestionId": "1008",
+                  "Id": "1007",
+                  "ParentQuestionId": "1006",
                   "ParentAnswerId": "160",
                   "SuggestedText": "Enter",
                   "QuestionGroupId": "",
                   "AdditionalText": "Range: 20-950",
-                  "QuestionOrder": 10,
+                  "QuestionOrder": 8,
                   "PossibleAnswers": [
                     {
                       "Id": "162",
@@ -470,22 +425,23 @@ const questions = {
                   ],
                   "GroupLabel": "",
                   "Label": "What is the exact value of your most recently measured total cholesterol?",
-                  "Index": 10,
+                  "FieldLabel": ["Total cholesterol"],
+                  "Index": 8,
                   "QuestionType": "Numeric"
                 }
               },
               {
                 "relatedAnswer": "No",
                 "Question": {
-                  "Id": "1010",
+                  "Id": "1008",
                   "Orientation": "vertical",
                   "StepperLine": true,
-                  "ParentQuestionId": "1008",
+                  "ParentQuestionId": "1006",
                   "ParentAnswerId": "161",
                   "SuggestedText": "Select",
                   "QuestionGroupId": "",
                   "AdditionalText": "",
-                  "QuestionOrder": 11,
+                  "QuestionOrder": 9,
                   "PossibleAnswers": [
                     {
                       "Id": "165",
@@ -519,14 +475,14 @@ const questions = {
                   "Validators": [],
                   "GroupLabel": "",
                   "Label": "What is the range you believe best represents your total cholesterol?",
-                  "Index": 11,
+                  "Index": 9,
                   "QuestionType": "RadioButton"
                 }
               }
             ]
           },
           {
-            "Id": "1011",
+            "Id": "1009",
             "Orientation": "vertical",
             "StepperLine": false,
             "ParentQuestionId": "",
@@ -534,7 +490,7 @@ const questions = {
             "SuggestedText": "Select",
             "QuestionGroupId": "",
             "AdditionalText": "",
-            "QuestionOrder": 12,
+            "QuestionOrder": 10,
             "PossibleAnswers": [
               {
                 "Id": "169",
@@ -554,19 +510,19 @@ const questions = {
             "Validators": [],
             "GroupLabel": "",
             "Label": "Do you know the exact value of your recently measured fasting glucose?",
-            "Index": 12,
+            "Index": 10,
             "QuestionType": "RadioButton",
             "responsive": [
               {
                 "relatedAnswer": "Yes",
                 "Question": {
-                  "Id": "1012",
-                  "ParentQuestionId": "1011",
+                  "Id": "1010",
+                  "ParentQuestionId": "1009",
                   "ParentAnswerId": "169",
                   "SuggestedText": "Enter",
                   "QuestionGroupId": "",
                   "AdditionalText": "Range: 20-720",
-                  "QuestionOrder": 13,
+                  "QuestionOrder": 11,
                   "PossibleAnswers": [
                     {
                       "Id": "171",
@@ -594,34 +550,35 @@ const questions = {
                     {
                       "Type": "Numeric",
                       "Severity": "Error",
-                      "FailureMessage": "Glucose is numeric"
+                      "FailureMessage": "Fasting glucose is numeric"
                     },
                     {
                       "MinValue": 20,
                       "MaxValue": 720,
                       "Type": "Range",
                       "Severity": "Warning",
-                      "FailureMessage": "Glucose should be between 20 and 720."
+                      "FailureMessage": "Fasting glucose should be between 20 and 720."
                     }
                   ],
                   "GroupLabel": "",
                   "Label": "What is the exact value of your most recently measured fasting glucose?",
-                  "Index": 13,
+                  "FieldLabel": ["Fasting glucose"],
+                  "Index": 11,
                   "QuestionType": "Numeric"
                 }
               },
               {
                 "relatedAnswer": "No",
                 "Question": {
-                  "Id": "1013",
-                  "ParentQuestionId": "1011",
+                  "Id": "1011",
+                  "ParentQuestionId": "1009",
                   "Orientation": "vertical",
                   "StepperLine": true,
                   "ParentAnswerId": "170",
                   "SuggestedText": "Select",
                   "QuestionGroupId": "",
                   "AdditionalText": "",
-                  "QuestionOrder": 14,
+                  "QuestionOrder": 12,
                   "PossibleAnswers": [
                     {
                       "Id": "174",
@@ -655,7 +612,7 @@ const questions = {
                   "Validators": [],
                   "GroupLabel": "",
                   "Label": "What is the range you believe best represents your fasting glucose?",
-                  "Index": 14,
+                  "Index": 12,
                   "QuestionType": "RadioButton"
                 }
               }
@@ -666,7 +623,7 @@ const questions = {
       {
         "Questions": [
           {
-            "Id": "1014",
+            "Id": "1012",
             "display": false,
             "Orientation": "horizontal",
             "StepperLine": true,
@@ -675,7 +632,7 @@ const questions = {
             "SuggestedText": "Select",
             "QuestionGroupId": "",
             "AdditionalText": "",
-            "QuestionOrder": 15,
+            "QuestionOrder": 13,
             "PossibleAnswers": [
               {
                 "Id": "178",
@@ -709,11 +666,11 @@ const questions = {
             "Validators": [],
             "GroupLabel": "",
             "Label": "In the past 12 months, how many times have you seen a physician?",
-            "Index": 15,
+            "Index": 13,
             "QuestionType": "RadioButton"
           },
           {
-            "Id": "1014",
+            "Id": "1013",
             "ParentQuestionId": "",
             "Orientation": "vertical",
             "StepperLine": false,
@@ -721,7 +678,7 @@ const questions = {
             "SuggestedText": "Select",
             "QuestionGroupId": "",
             "AdditionalText": "",
-            "QuestionOrder": 15,
+            "QuestionOrder": 14,
             "PossibleAnswers": [
               {
                 "Id": "178",
@@ -748,11 +705,11 @@ const questions = {
             "Validators": [],
             "GroupLabel": "",
             "Label": "Do you have a personal physician?",
-            "Index": 15,
+            "Index": 14,
             "QuestionType": "RadioButton"
           },
           {
-            "Id": "1015",
+            "Id": "1014",
             "Orientation": "vertical",
             "StepperLine": false,
             "ParentQuestionId": "",
@@ -760,7 +717,7 @@ const questions = {
             "SuggestedText": "Select",
             "QuestionGroupId": "",
             "AdditionalText": "",
-            "QuestionOrder": 16,
+            "QuestionOrder": 15,
             "PossibleAnswers": [
               {
                 "Id": "181",
@@ -787,11 +744,11 @@ const questions = {
             "Validators": [],
             "GroupLabel": "",
             "Label": "Are you or your spouse/partner pregnant?",
-            "Index": 16,
+            "Index": 15,
             "QuestionType": "RadioButton"
           },
           {
-            "Id": "1016",
+            "Id": "1015",
             "ParentQuestionId": "",
             "Orientation": "vertical",
             "StepperLine": false,
@@ -799,7 +756,7 @@ const questions = {
             "SuggestedText": "Select",
             "QuestionGroupId": "",
             "AdditionalText": "",
-            "QuestionOrder": 17,
+            "QuestionOrder": 16,
             "PossibleAnswers": [
               {
                 "Id": "184",
@@ -826,7 +783,7 @@ const questions = {
             "Validators": [],
             "GroupLabel": "",
             "Label": "Is the person who is pregnant or planning on becoming pregnant taking folic acid?",
-            "Index": 17,
+            "Index": 16,
             "QuestionType": "RadioButton"
           }
         ]
@@ -834,7 +791,7 @@ const questions = {
       {
         "Questions": [
           {
-            "Id": "1017",
+            "Id": "1016",
             "ParentQuestionId": "",
             "Orientation": "horizontal",
             "StepperLine": true,
@@ -842,7 +799,7 @@ const questions = {
             "SuggestedText": "Select",
             "QuestionGroupId": "2",
             "AdditionalText": "",
-            "QuestionOrder": 18,
+            "QuestionOrder": 17,
             "PossibleAnswers": [
               {
                 "Id": "186",
@@ -890,11 +847,11 @@ const questions = {
             "Validators": [],
             "GroupLabel": "When were your most recent health exams/tests?",
             "SubLabel": "Pap/HPV test",
-            "Index": 18,
+            "Index": 17,
             "QuestionType": "RadioButton"
           },
           {
-            "Id": "1018",
+            "Id": "1017",
             "ParentQuestionId": "",
             "Orientation": "horizontal",
             "StepperLine": true,
@@ -902,7 +859,7 @@ const questions = {
             "SuggestedText": "Select",
             "QuestionGroupId": "2",
             "AdditionalText": "",
-            "QuestionOrder": 19,
+            "QuestionOrder": 18,
             "PossibleAnswers": [
               {
                 "Id": "192",
@@ -950,7 +907,7 @@ const questions = {
             "Validators": [],
             "GroupLabel": "When were your most recent health exams/tests?",
             "SubLabel": "Professional breast exam",
-            "Index": 19,
+            "Index": 18,
             "QuestionType": "RadioButton"
           }
         ]
@@ -958,7 +915,7 @@ const questions = {
       {
         "Questions": [
           {
-            "Id": "1019",
+            "Id": "1018",
             "Orientation": "vertical",
             "StepperLine": false,
             "ParentQuestionId": "",
@@ -966,7 +923,7 @@ const questions = {
             "SuggestedText": "Select",
             "QuestionGroupId": "",
             "AdditionalText": "",
-            "QuestionOrder": 20,
+            "QuestionOrder": 19,
             "PossibleAnswers": [
               {
                 "Id": "198",
@@ -986,22 +943,22 @@ const questions = {
             "Validators": [],
             "GroupLabel": "",
             "Label": "Have you ever used tobacco or e-cigarettes?",
-            "Index": 20,
+            "Index": 19,
             "QuestionType": "RadioButton",
             "responsive": [
               {
                 "relatedAnswer": "Yes",
                 "Question": {
-                  "Id": "1020",
+                  "Id": "1019",
                   "display": true,
                   "Orientation": "horizontal",
                   "StepperLine": true,
-                  "ParentQuestionId": "1019",
+                  "ParentQuestionId": "1018",
                   "ParentAnswerId": "198",
                   "SuggestedText": "Select",
                   "QuestionGroupId": "",
                   "AdditionalText": "",
-                  "QuestionOrder": 21,
+                  "QuestionOrder": 20,
                   "PossibleAnswers": [
                     {
                       "Id": "200",
@@ -1028,14 +985,14 @@ const questions = {
                   "Validators": [],
                   "GroupLabel": "",
                   "Label": "Which of the following best describes your usage?",
-                  "Index": 21,
+                  "Index": 20,
                   "QuestionType": "RadioButton",
                   "responsive": [
                     {
                       "relatedAnswer": "I am an occasional/social user",
                       "Questions": [
                         {
-                          "Id": "1021",
+                          "Id": "1020",
                           "Orientation": "horizontal",
                           "StepperLine": true,
                           "ParentQuestionId": "",
@@ -1043,7 +1000,7 @@ const questions = {
                           "SuggestedText": "Select",
                           "QuestionGroupId": "3",
                           "AdditionalText": "",
-                          "QuestionOrder": 22,
+                          "QuestionOrder": 21,
                           "PossibleAnswers": [
                             {
                               "Id": "203",
@@ -1084,11 +1041,11 @@ const questions = {
                           "Validators": [],
                           "GroupLabel": "On an average day, how many times do you use the following products?",
                           "SubLabel": "Smoke cigarettes",
-                          "Index": 22,
+                          "Index": 21,
                           "QuestionType": "RadioButton"
                         },
                         {
-                          "Id": "1022",
+                          "Id": "1021",
                           "Orientation": "horizontal",
                           "StepperLine": true,
                           "ParentQuestionId": "",
@@ -1096,7 +1053,7 @@ const questions = {
                           "SuggestedText": "Select",
                           "QuestionGroupId": "3",
                           "AdditionalText": "",
-                          "QuestionOrder": 23,
+                          "QuestionOrder": 22,
                           "PossibleAnswers": [
                             {
                               "Id": "208",
@@ -1137,11 +1094,11 @@ const questions = {
                           "Validators": [],
                           "GroupLabel": "On an average day, how many times do you use the following products?",
                           "SubLabel": "Smoke e-cigarettes",
-                          "Index": 23,
+                          "Index": 22,
                           "QuestionType": "RadioButton"
                         },
                         {
-                          "Id": "1023",
+                          "Id": "1022",
                           "Orientation": "horizontal",
                           "StepperLine": true,
                           "ParentQuestionId": "",
@@ -1149,7 +1106,7 @@ const questions = {
                           "SuggestedText": "Select",
                           "QuestionGroupId": "3",
                           "AdditionalText": "",
-                          "QuestionOrder": 24,
+                          "QuestionOrder": 23,
                           "PossibleAnswers": [
                             {
                               "Id": "213",
@@ -1190,11 +1147,11 @@ const questions = {
                           "Validators": [],
                           "GroupLabel": "On an average day, how many times do you use the following products?",
                           "SubLabel": "Smoke cigars",
-                          "Index": 24,
+                          "Index": 23,
                           "QuestionType": "RadioButton"
                         },
                         {
-                          "Id": "1024",
+                          "Id": "1023",
                           "Orientation": "horizontal",
                           "StepperLine": true,
                           "ParentQuestionId": "",
@@ -1202,7 +1159,7 @@ const questions = {
                           "SuggestedText": "Select",
                           "QuestionGroupId": "3",
                           "AdditionalText": "",
-                          "QuestionOrder": 25,
+                          "QuestionOrder": 24,
                           "PossibleAnswers": [
                             {
                               "Id": "218",
@@ -1243,11 +1200,11 @@ const questions = {
                           "Validators": [],
                           "GroupLabel": "On an average day, how many times do you use the following products?",
                           "SubLabel": "Use smokeless tobacco",
-                          "Index": 25,
+                          "Index": 24,
                           "QuestionType": "RadioButton"
                         },
                         {
-                          "Id": "1025",
+                          "Id": "1024",
                           "Orientation": "horizontal",
                           "StepperLine": true,
                           "ParentQuestionId": "",
@@ -1255,7 +1212,7 @@ const questions = {
                           "SuggestedText": "Select",
                           "QuestionGroupId": "3",
                           "AdditionalText": "",
-                          "QuestionOrder": 26,
+                          "QuestionOrder": 25,
                           "PossibleAnswers": [
                             {
                               "Id": "223",
@@ -1296,7 +1253,7 @@ const questions = {
                           "Validators": [],
                           "GroupLabel": "On an average day, how many times do you use the following products?",
                           "SubLabel": "Smoke a pipe",
-                          "Index": 26,
+                          "Index": 25,
                           "QuestionType": "RadioButton"
                         }
                       ]
@@ -1305,7 +1262,7 @@ const questions = {
                       "relatedAnswer": "I currently use",
                       "Questions": [
                         {
-                          "Id": "1021",
+                          "Id": "1025",
                           "Orientation": "horizontal",
                           "StepperLine": true,
                           "ParentQuestionId": "",
@@ -1313,7 +1270,7 @@ const questions = {
                           "SuggestedText": "Select",
                           "QuestionGroupId": "3",
                           "AdditionalText": "",
-                          "QuestionOrder": 22,
+                          "QuestionOrder": 26,
                           "PossibleAnswers": [
                             {
                               "Id": "203",
@@ -1354,11 +1311,11 @@ const questions = {
                           "Validators": [],
                           "GroupLabel": "On an average day, how many times do you use the following products?",
                           "SubLabel": "Smoke cigarettes",
-                          "Index": 22,
+                          "Index": 26,
                           "QuestionType": "RadioButton"
                         },
                         {
-                          "Id": "1022",
+                          "Id": "1026",
                           "Orientation": "horizontal",
                           "StepperLine": true,
                           "ParentQuestionId": "",
@@ -1366,7 +1323,7 @@ const questions = {
                           "SuggestedText": "Select",
                           "QuestionGroupId": "3",
                           "AdditionalText": "",
-                          "QuestionOrder": 23,
+                          "QuestionOrder": 27,
                           "PossibleAnswers": [
                             {
                               "Id": "208",
@@ -1407,11 +1364,11 @@ const questions = {
                           "Validators": [],
                           "GroupLabel": "On an average day, how many times do you use the following products?",
                           "SubLabel": "Smoke e-cigarettes",
-                          "Index": 23,
+                          "Index": 27,
                           "QuestionType": "RadioButton"
                         },
                         {
-                          "Id": "1023",
+                          "Id": "1027",
                           "Orientation": "horizontal",
                           "StepperLine": true,
                           "ParentQuestionId": "",
@@ -1460,11 +1417,11 @@ const questions = {
                           "Validators": [],
                           "GroupLabel": "On an average day, how many times do you use the following products?",
                           "SubLabel": "Smoke cigars",
-                          "Index": 24,
+                          "Index": 28,
                           "QuestionType": "RadioButton"
                         },
                         {
-                          "Id": "1024",
+                          "Id": "1028",
                           "Orientation": "horizontal",
                           "StepperLine": true,
                           "ParentQuestionId": "",
@@ -1472,7 +1429,7 @@ const questions = {
                           "SuggestedText": "Select",
                           "QuestionGroupId": "3",
                           "AdditionalText": "",
-                          "QuestionOrder": 25,
+                          "QuestionOrder": 29,
                           "PossibleAnswers": [
                             {
                               "Id": "218",
@@ -1513,11 +1470,11 @@ const questions = {
                           "Validators": [],
                           "GroupLabel": "On an average day, how many times do you use the following products?",
                           "SubLabel": "Use smokeless tobacco",
-                          "Index": 25,
+                          "Index": 29,
                           "QuestionType": "RadioButton"
                         },
                         {
-                          "Id": "1025",
+                          "Id": "1029",
                           "Orientation": "horizontal",
                           "StepperLine": true,
                           "ParentQuestionId": "",
@@ -1525,7 +1482,7 @@ const questions = {
                           "SuggestedText": "Select",
                           "QuestionGroupId": "3",
                           "AdditionalText": "",
-                          "QuestionOrder": 26,
+                          "QuestionOrder": 30,
                           "PossibleAnswers": [
                             {
                               "Id": "223",
@@ -1566,7 +1523,7 @@ const questions = {
                           "Validators": [],
                           "GroupLabel": "On an average day, how many times do you use the following products?",
                           "SubLabel": "Smoke a pipe",
-                          "Index": 26,
+                          "Index": 30,
                           "QuestionType": "RadioButton"
                         }
                       ]
@@ -1581,7 +1538,7 @@ const questions = {
       {
         "Questions": [
           {
-            "Id": "1026",
+            "Id": "1030",
             "Orientation": "horizontal",
             "StepperLine": true,
             "ParentQuestionId": "",
@@ -1589,7 +1546,7 @@ const questions = {
             "SuggestedText": "Select",
             "QuestionGroupId": "",
             "AdditionalText": "",
-            "QuestionOrder": 27,
+            "QuestionOrder": 31,
             "PossibleAnswers": [
               {
                 "Id": "228",
@@ -1637,11 +1594,11 @@ const questions = {
             "Validators": [],
             "GroupLabel": "",
             "Label": "In an average week, how many alcoholic drinks do you usually consume?",
-            "Index": 27,
+            "Index": 31,
             "QuestionType": "RadioButton"
           },
           {
-            "Id": "1027",
+            "Id": "1031",
             "Orientation": "vertical",
             "StepperLine": false,
             "ParentQuestionId": "",
@@ -1649,7 +1606,7 @@ const questions = {
             "SuggestedText": "Select",
             "QuestionGroupId": "",
             "AdditionalText": "",
-            "QuestionOrder": 28,
+            "QuestionOrder": 32,
             "PossibleAnswers": [
               {
                 "Id": "233",
@@ -1669,11 +1626,11 @@ const questions = {
             "Validators": [],
             "GroupLabel": "",
             "Label": "In the last 6 months, have you had five or more alcoholic drinks in a single sitting?",
-            "Index": 28,
+            "Index": 32,
             "QuestionType": "RadioButton"
           },
           {
-            "Id": "1028",
+            "Id": "1032",
             "Orientation": "horizontal",
             "StepperLine": true,
             "ParentQuestionId": "",
@@ -1681,7 +1638,7 @@ const questions = {
             "SuggestedText": "Select",
             "QuestionGroupId": "4",
             "AdditionalText": "",
-            "QuestionOrder": 29,
+            "QuestionOrder": 33,
             "PossibleAnswers": [
               {
                 "Id": "235",
@@ -1729,11 +1686,11 @@ const questions = {
             "Validators": [],
             "GroupLabel": "On an average day, how many servings of the following do you eat?",
             "SubLabel": "Fruits and/or vegetables",
-            "Index": 29,
+            "Index": 33,
             "QuestionType": "RadioButton"
           },
           {
-            "Id": "1029",
+            "Id": "1033",
             "Orientation": "horizontal",
             "StepperLine": true,
             "ParentQuestionId": "",
@@ -1741,7 +1698,7 @@ const questions = {
             "SuggestedText": "Select",
             "QuestionGroupId": "4",
             "AdditionalText": "",
-            "QuestionOrder": 30,
+            "QuestionOrder": 34,
             "PossibleAnswers": [
               {
                 "Id": "241",
@@ -1790,11 +1747,11 @@ const questions = {
             "GroupLabel": "On an average day, how many servings of the following do you eat?",
             "SubLabel": "High fiber foods",
             "toolTip": "For example, cereal and whole grain bread",
-            "Index": 30,
+            "Index": 34,
             "QuestionType": "RadioButton"
           },
           {
-            "Id": "1030",
+            "Id": "1034",
             "Orientation": "horizontal",
             "StepperLine": true,
             "ParentQuestionId": "",
@@ -1802,7 +1759,7 @@ const questions = {
             "SuggestedText": "Select",
             "QuestionGroupId": "4",
             "AdditionalText": "",
-            "QuestionOrder": 31,
+            "QuestionOrder": 35,
             "PossibleAnswers": [
               {
                 "Id": "247",
@@ -1850,7 +1807,7 @@ const questions = {
             "Validators": [],
             "GroupLabel": "On an average day, how many servings of the following do you eat?",
             "SubLabel": "High fat foods",
-            "Index": 31,
+            "Index": 35,
             "QuestionType": "RadioButton"
           }
         ]
@@ -1858,7 +1815,7 @@ const questions = {
       {
         "Questions": [
           {
-            "Id": "1031",
+            "Id": "1035",
             "Orientation": "horizontal",
             "StepperLine": true,
             "ParentQuestionId": "",
@@ -1866,7 +1823,7 @@ const questions = {
             "SuggestedText": "Select",
             "QuestionGroupId": "5",
             "AdditionalText": "",
-            "QuestionOrder": 32,
+            "QuestionOrder": 36,
             "PossibleAnswers": [
               {
                 "Id": "253",
@@ -1915,11 +1872,11 @@ const questions = {
             "GroupLabel": "In an average week, how many times do you participate in the following?",
             "SubLabel": "Aerobic exercise",
             "toolTip": "For example, cardio, brisk walking, swimming, running",
-            "Index": 32,
+            "Index": 36,
             "QuestionType": "RadioButton"
           },
           {
-            "Id": "1032",
+            "Id": "1036",
             "Orientation": "horizontal",
             "StepperLine": true,
             "ParentQuestionId": "",
@@ -1927,7 +1884,7 @@ const questions = {
             "SuggestedText": "Select",
             "QuestionGroupId": "5",
             "AdditionalText": "",
-            "QuestionOrder": 33,
+            "QuestionOrder": 37,
             "PossibleAnswers": [
               {
                 "Id": "259",
@@ -1975,11 +1932,11 @@ const questions = {
             "Validators": [],
             "GroupLabel": "In an average week, how many times do you participate in the following?",
             "SubLabel": "Strength training exercise",
-            "Index": 33,
+            "Index": 37,
             "QuestionType": "RadioButton"
           },
           {
-            "Id": "1033",
+            "Id": "1037",
             "Orientation": "horizontal",
             "StepperLine": true,
             "ParentQuestionId": "",
@@ -1987,7 +1944,7 @@ const questions = {
             "SuggestedText": "Select",
             "QuestionGroupId": "",
             "AdditionalText": "",
-            "QuestionOrder": 34,
+            "QuestionOrder": 38,
             "PossibleAnswers": [
               {
                 "Id": "265",
@@ -2021,11 +1978,11 @@ const questions = {
             "Validators": [],
             "GroupLabel": "",
             "Label": "How often do you use your cell phone while driving, excluding hands free usage?",
-            "Index": 34,
+            "Index": 38,
             "QuestionType": "RadioButton"
           },
           {
-            "Id": "1034",
+            "Id": "1038",
             "Orientation": "horizontal",
             "StepperLine": true,
             "ParentQuestionId": "",
@@ -2033,7 +1990,7 @@ const questions = {
             "SuggestedText": "Select",
             "QuestionGroupId": "",
             "AdditionalText": "",
-            "QuestionOrder": 35,
+            "QuestionOrder": 39,
             "PossibleAnswers": [
               {
                 "Id": "269",
@@ -2067,11 +2024,11 @@ const questions = {
             "Validators": [],
             "GroupLabel": "",
             "Label": "How close to the speed limit do you drive?",
-            "Index": 35,
+            "Index": 39,
             "QuestionType": "RadioButton"
           },
           {
-            "Id": "1035",
+            "Id": "1039",
             "Orientation": "horizontal",
             "StepperLine": true,
             "ParentQuestionId": "",
@@ -2079,7 +2036,7 @@ const questions = {
             "SuggestedText": "Select",
             "QuestionGroupId": "",
             "AdditionalText": "",
-            "QuestionOrder": 36,
+            "QuestionOrder": 40,
             "PossibleAnswers": [
               {
                 "Id": "273",
@@ -2120,7 +2077,7 @@ const questions = {
             "Validators": [],
             "GroupLabel": "",
             "Label": "How many times in the last 6 months were you in a car where the driver was under the influence of drugs or alcohol (including yourself)?",
-            "Index": 36,
+            "Index": 40,
             "QuestionType": "RadioButton"
           }
         ]
@@ -2128,7 +2085,7 @@ const questions = {
       {
         "Questions": [
           {
-            "Id": "1036",
+            "Id": "1040",
             "Orientation": "vertical",
             "StepperLine": false,
             "ParentQuestionId": "",
@@ -2136,7 +2093,7 @@ const questions = {
             "SuggestedText": "Select",
             "QuestionGroupId": "",
             "AdditionalText": "",
-            "QuestionOrder": 37,
+            "QuestionOrder": 41,
             "PossibleAnswers": [
               {
                 "Id": "278",
@@ -2156,18 +2113,18 @@ const questions = {
             "Validators": [],
             "GroupLabel": "",
             "Label": "Do you use sunblock?",
-            "Index": 37,
+            "Index": 41,
             "QuestionType": "RadioButton"
           },
           {
-            "Id": "1037",
+            "Id": "1041",
             "Orientation": "vertical",
             "ParentQuestionId": "",
             "ParentAnswerId": "",
             "SuggestedText": "Select",
             "QuestionGroupId": "6",
             "AdditionalText": "",
-            "QuestionOrder": 38,
+            "QuestionOrder": 42,
             "PossibleAnswers": [
               {
                 "Id": "280",
@@ -2187,18 +2144,18 @@ const questions = {
             "Validators": [],
             "GroupLabel": "Do you spend a significant amount of time with any of the following?",
             "Label": "Excessive noise levels",
-            "Index": 38,
+            "Index": 42,
             "QuestionType": "Checkbox"
           },
           {
-            "Id": "1038",
+            "Id": "1042",
             "Orientation": "vertical",
             "ParentQuestionId": "",
             "ParentAnswerId": "",
             "SuggestedText": "Select",
             "QuestionGroupId": "6",
             "AdditionalText": "",
-            "QuestionOrder": 39,
+            "QuestionOrder": 43,
             "PossibleAnswers": [
               {
                 "Id": "282",
@@ -2218,18 +2175,18 @@ const questions = {
             "Validators": [],
             "GroupLabel": "Do you spend a significant amount of time with any of the following?",
             "Label": "Excessive lifting or heavy loads",
-            "Index": 39,
+            "Index": 43,
             "QuestionType": "Checkbox"
           },
           {
-            "Id": "1039",
+            "Id": "1043",
             "Orientation": "vertical",
             "ParentQuestionId": "",
             "ParentAnswerId": "",
             "SuggestedText": "Select",
             "QuestionGroupId": "6",
             "AdditionalText": "",
-            "QuestionOrder": 40,
+            "QuestionOrder": 44,
             "PossibleAnswers": [
               {
                 "Id": "284",
@@ -2249,18 +2206,18 @@ const questions = {
             "Validators": [],
             "GroupLabel": "Do you spend a significant amount of time with any of the following?",
             "Label": "Poorly designed work station",
-            "Index": 40,
+            "Index": 44,
             "QuestionType": "Checkbox"
           },
           {
-            "Id": "1040",
+            "Id": "1044",
             "Orientation": "vertical",
             "ParentQuestionId": "",
             "ParentAnswerId": "",
             "SuggestedText": "Select",
             "QuestionGroupId": "6",
             "AdditionalText": "",
-            "QuestionOrder": 41,
+            "QuestionOrder": 45,
             "PossibleAnswers": [
               {
                 "Id": "286",
@@ -2280,18 +2237,18 @@ const questions = {
             "Validators": [],
             "GroupLabel": "Do you spend a significant amount of time with any of the following?",
             "Label": "Noxious fumes/toxins/hazardous chemicals",
-            "Index": 41,
+            "Index": 45,
             "QuestionType": "Checkbox"
           },
           {
-            "Id": "1041",
+            "Id": "1045",
             "Orientation": "vertical",
             "ParentQuestionId": "",
             "ParentAnswerId": "",
             "SuggestedText": "Select",
             "QuestionGroupId": "6",
             "AdditionalText": "",
-            "QuestionOrder": 42,
+            "QuestionOrder": 46,
             "PossibleAnswers": [
               {
                 "Id": "288",
@@ -2311,18 +2268,18 @@ const questions = {
             "Validators": [],
             "GroupLabel": "Do you spend a significant amount of time with any of the following?",
             "Label": "Blood or blood products",
-            "Index": 42,
+            "Index": 46,
             "QuestionType": "Checkbox"
           },
           {
-            "Id": "1042",
+            "Id": "1046",
             "Orientation": "vertical",
             "ParentQuestionId": "",
             "ParentAnswerId": "",
             "SuggestedText": "Select",
             "QuestionGroupId": "6",
             "AdditionalText": "",
-            "QuestionOrder": 43,
+            "QuestionOrder": 47,
             "PossibleAnswers": [
               {
                 "Id": "290",
@@ -2342,7 +2299,7 @@ const questions = {
             "Validators": [],
             "GroupLabel": "Do you spend a significant amount of time with any of the following?",
             "Label": "None of the above",
-            "Index": 43,
+            "Index": 47,
             "QuestionType": "Checkbox"
           }
         ]
@@ -2350,14 +2307,14 @@ const questions = {
       {
         "Questions": [
           {
-            "Id": "1043",
+            "Id": "1047",
             "Orientation": "vertical",
             "ParentQuestionId": "",
             "ParentAnswerId": "",
             "SuggestedText": "Select",
             "QuestionGroupId": "7",
             "AdditionalText": "",
-            "QuestionOrder": 44,
+            "QuestionOrder": 48,
             "PossibleAnswers": [
               {
                 "Id": "292",
@@ -2377,18 +2334,18 @@ const questions = {
             "Validators": [],
             "GroupLabel": "In the past year, have you had any serious problems with the following?",
             "Label": "Death of a loved one",
-            "Index": 44,
+            "Index": 48,
             "QuestionType": "Checkbox"
           },
           {
-            "Id": "1044",
+            "Id": "1048",
             "Orientation": "vertical",
             "ParentQuestionId": "",
             "ParentAnswerId": "",
             "SuggestedText": "Select",
             "QuestionGroupId": "7",
             "AdditionalText": "",
-            "QuestionOrder": 45,
+            "QuestionOrder": 49,
             "PossibleAnswers": [
               {
                 "Id": "294",
@@ -2408,18 +2365,18 @@ const questions = {
             "Validators": [],
             "GroupLabel": "In the past year, have you had any serious problems with the following?",
             "Label": "Depression",
-            "Index": 45,
+            "Index": 49,
             "QuestionType": "Checkbox"
           },
           {
-            "Id": "1045",
+            "Id": "1049",
             "Orientation": "vertical",
             "ParentQuestionId": "",
             "ParentAnswerId": "",
             "SuggestedText": "Select",
             "QuestionGroupId": "7",
             "AdditionalText": "",
-            "QuestionOrder": 46,
+            "QuestionOrder": 50,
             "PossibleAnswers": [
               {
                 "Id": "296",
@@ -2439,18 +2396,18 @@ const questions = {
             "Validators": [],
             "GroupLabel": "In the past year, have you had any serious problems with the following?",
             "Label": "Divorce/separation",
-            "Index": 46,
+            "Index": 50,
             "QuestionType": "Checkbox"
           },
           {
-            "Id": "1046",
+            "Id": "1050",
             "Orientation": "vertical",
             "ParentQuestionId": "",
             "ParentAnswerId": "",
             "SuggestedText": "Select",
             "QuestionGroupId": "7",
             "AdditionalText": "",
-            "QuestionOrder": 47,
+            "QuestionOrder": 51,
             "PossibleAnswers": [
               {
                 "Id": "298",
@@ -2470,18 +2427,18 @@ const questions = {
             "Validators": [],
             "GroupLabel": "In the past year, have you had any serious problems with the following?",
             "Label": "Family",
-            "Index": 47,
+            "Index": 51,
             "QuestionType": "Checkbox"
           },
           {
-            "Id": "1047",
+            "Id": "1051",
             "Orientation": "vertical",
             "ParentQuestionId": "",
             "ParentAnswerId": "",
             "SuggestedText": "Select",
             "QuestionGroupId": "7",
             "AdditionalText": "",
-            "QuestionOrder": 48,
+            "QuestionOrder": 52,
             "PossibleAnswers": [
               {
                 "Id": "300",
@@ -2501,18 +2458,18 @@ const questions = {
             "Validators": [],
             "GroupLabel": "In the past year, have you had any serious problems with the following?",
             "Label": "Finances",
-            "Index": 48,
+            "Index": 52,
             "QuestionType": "Checkbox"
           },
           {
-            "Id": "1048",
+            "Id": "1052",
             "Orientation": "vertical",
             "ParentQuestionId": "",
             "ParentAnswerId": "",
             "SuggestedText": "Select",
             "QuestionGroupId": "7",
             "AdditionalText": "",
-            "QuestionOrder": 49,
+            "QuestionOrder": 53,
             "PossibleAnswers": [
               {
                 "Id": "302",
@@ -2532,18 +2489,18 @@ const questions = {
             "Validators": [],
             "GroupLabel": "In the past year, have you had any serious problems with the following?",
             "Label": "Friend or co-worker",
-            "Index": 49,
+            "Index": 53,
             "QuestionType": "Checkbox"
           },
           {
-            "Id": "1049",
+            "Id": "1053",
             "Orientation": "vertical",
             "ParentQuestionId": "",
             "ParentAnswerId": "",
             "SuggestedText": "Select",
             "QuestionGroupId": "7",
             "AdditionalText": "",
-            "QuestionOrder": 50,
+            "QuestionOrder": 54,
             "PossibleAnswers": [
               {
                 "Id": "304",
@@ -2563,18 +2520,18 @@ const questions = {
             "Validators": [],
             "GroupLabel": "In the past year, have you had any serious problems with the following?",
             "Label": "Health",
-            "Index": 50,
+            "Index": 54,
             "QuestionType": "Checkbox"
           },
           {
-            "Id": "1050",
+            "Id": "1054",
             "Orientation": "vertical",
             "ParentQuestionId": "",
             "ParentAnswerId": "",
             "SuggestedText": "Select",
             "QuestionGroupId": "7",
             "AdditionalText": "",
-            "QuestionOrder": 51,
+            "QuestionOrder": 55,
             "PossibleAnswers": [
               {
                 "Id": "306",
@@ -2594,18 +2551,18 @@ const questions = {
             "Validators": [],
             "GroupLabel": "In the past year, have you had any serious problems with the following?",
             "Label": "Job loss",
-            "Index": 51,
+            "Index": 55,
             "QuestionType": "Checkbox"
           },
           {
-            "Id": "1051",
+            "Id": "1055",
             "Orientation": "vertical",
             "ParentQuestionId": "",
             "ParentAnswerId": "",
             "SuggestedText": "Select",
             "QuestionGroupId": "7",
             "AdditionalText": "",
-            "QuestionOrder": 52,
+            "QuestionOrder": 56,
             "PossibleAnswers": [
               {
                 "Id": "308",
@@ -2625,18 +2582,18 @@ const questions = {
             "Validators": [],
             "GroupLabel": "In the past year, have you had any serious problems with the following?",
             "Label": "Job stress or anxiety",
-            "Index": 52,
+            "Index": 56,
             "QuestionType": "Checkbox"
           },
           {
-            "Id": "1052",
+            "Id": "1056",
             "Orientation": "vertical",
             "ParentQuestionId": "",
             "ParentAnswerId": "",
             "SuggestedText": "Select",
             "QuestionGroupId": "7",
             "AdditionalText": "",
-            "QuestionOrder": 53,
+            "QuestionOrder": 57,
             "PossibleAnswers": [
               {
                 "Id": "310",
@@ -2656,18 +2613,18 @@ const questions = {
             "Validators": [],
             "GroupLabel": "In the past year, have you had any serious problems with the following?",
             "Label": "Job supervisor or manager",
-            "Index": 53,
+            "Index": 57,
             "QuestionType": "Checkbox"
           },
           {
-            "Id": "1053",
+            "Id": "1057",
             "Orientation": "vertical",
             "ParentQuestionId": "",
             "ParentAnswerId": "",
             "SuggestedText": "Select",
             "QuestionGroupId": "7",
             "AdditionalText": "",
-            "QuestionOrder": 54,
+            "QuestionOrder": 58,
             "PossibleAnswers": [
               {
                 "Id": "312",
@@ -2687,18 +2644,18 @@ const questions = {
             "Validators": [],
             "GroupLabel": "In the past year, have you had any serious problems with the following?",
             "Label": "Lost work time/disability",
-            "Index": 54,
+            "Index": 58,
             "QuestionType": "Checkbox"
           },
           {
-            "Id": "1054",
+            "Id": "1058",
             "Orientation": "vertical",
             "ParentQuestionId": "",
             "ParentAnswerId": "",
             "SuggestedText": "Select",
             "QuestionGroupId": "7",
             "AdditionalText": "",
-            "QuestionOrder": 55,
+            "QuestionOrder": 59,
             "PossibleAnswers": [
               {
                 "Id": "314",
@@ -2718,18 +2675,18 @@ const questions = {
             "Validators": [],
             "GroupLabel": "In the past year, have you had any serious problems with the following?",
             "Label": "Moving/relocation",
-            "Index": 55,
+            "Index": 59,
             "QuestionType": "Checkbox"
           },
           {
-            "Id": "1055",
+            "Id": "1059",
             "Orientation": "vertical",
             "ParentQuestionId": "",
             "ParentAnswerId": "",
             "SuggestedText": "Select",
             "QuestionGroupId": "7",
             "AdditionalText": "",
-            "QuestionOrder": 56,
+            "QuestionOrder": 60,
             "PossibleAnswers": [
               {
                 "Id": "316",
@@ -2749,18 +2706,18 @@ const questions = {
             "Validators": [],
             "GroupLabel": "In the past year, have you had any serious problems with the following?",
             "Label": "Relationships",
-            "Index": 56,
+            "Index": 60,
             "QuestionType": "Checkbox"
           },
           {
-            "Id": "1056",
+            "Id": "1060",
             "ParentQuestionId": "",
             "Orientation": "vertical",
             "ParentAnswerId": "",
             "SuggestedText": "Select",
             "QuestionGroupId": "7",
             "AdditionalText": "",
-            "QuestionOrder": 57,
+            "QuestionOrder": 61,
             "PossibleAnswers": [
               {
                 "Id": "318",
@@ -2780,18 +2737,18 @@ const questions = {
             "Validators": [],
             "GroupLabel": "In the past year, have you had any serious problems with the following?",
             "Label": "Stress or anxiety (not job related)",
-            "Index": 57,
+            "Index": 61,
             "QuestionType": "Checkbox"
           },
           {
-            "Id": "1057",
+            "Id": "1061",
             "Orientation": "vertical",
             "ParentQuestionId": "",
             "ParentAnswerId": "",
             "SuggestedText": "Select",
             "QuestionGroupId": "7",
             "AdditionalText": "",
-            "QuestionOrder": 58,
+            "QuestionOrder": 62,
             "PossibleAnswers": [
               {
                 "Id": "320",
@@ -2811,11 +2768,11 @@ const questions = {
             "Validators": [],
             "GroupLabel": "In the past year, have you had any serious problems with the following?",
             "Label": "None of the above",
-            "Index": 58,
+            "Index": 62,
             "QuestionType": "Checkbox"
           },
           {
-            "Id": "1058",
+            "Id": "1062",
             "Orientation": "horizontal",
             "StepperLine": true,
             "ParentQuestionId": "",
@@ -2823,7 +2780,7 @@ const questions = {
             "SuggestedText": "Select",
             "QuestionGroupId": "",
             "AdditionalText": "",
-            "QuestionOrder": 59,
+            "QuestionOrder": 63,
             "PossibleAnswers": [
               {
                 "Id": "322",
@@ -2850,7 +2807,7 @@ const questions = {
             "Validators": [],
             "GroupLabel": "",
             "Label": "How often do you use stress reducing techniques, such as exercise, meditation, prayer, journaling, etc.",
-            "Index": 59,
+            "Index": 63,
             "QuestionType": "RadioButton"
           }
         ]
@@ -2858,6 +2815,7 @@ const questions = {
     ]
   }
 }
+
 
 
 export {questions};

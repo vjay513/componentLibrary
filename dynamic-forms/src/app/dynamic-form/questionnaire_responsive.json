@@ -1,4 +1,4 @@
-const questions = {
+{
   "HealthyQuestHRAScript": {
     "ScriptId": "1001",
     "ScriptType": "HealthyQuestHRA",
@@ -61,9 +61,8 @@ const questions = {
               }
             ],
             "Validators": [],
-            "GroupLabel": "What is your most recent measured height?",
-            "FieldLabel": "Feet",
-            "Label": "",
+            "GroupLabel": "",
+            "Label": "What is your recent measured height in Feet?",
             "Index": 1,
             "QuestionType": "DropdownList"
           },
@@ -123,8 +122,7 @@ const questions = {
             ],
             "Validators": [],
             "GroupLabel": "",
-            "FieldLabel": "Inches",
-            "Label": "",
+            "Label": "What is your recent measured height in Inches?",
             "Index": 2,
             "QuestionType": "DropdownList"
           },
@@ -154,8 +152,7 @@ const questions = {
               }
             ],
             "GroupLabel": "",
-            "FieldLabel": "Pounds",
-            "Label": "What is your recent measured weight to the nearest digit?",
+            "Label": "What was your most recent measured Weight in lbs?",
             "Index": 3,
             "QuestionType": "Numeric"
           },
@@ -2438,7 +2435,7 @@ const questions = {
             ],
             "Validators": [],
             "GroupLabel": "In the past year, have you had any serious problems with the following?",
-            "Label": "Divorce/separation",
+            "Label": "Divorce/Separation",
             "Index": 46,
             "QuestionType": "Checkbox"
           },
@@ -2858,6 +2855,3 @@ const questions = {
     ]
   }
 }
-
-
-export {questions};

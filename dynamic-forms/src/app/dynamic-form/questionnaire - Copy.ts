@@ -61,9 +61,8 @@ const questions = {
               }
             ],
             "Validators": [],
-            "GroupLabel": "What is your most recent measured height?",
-            "FieldLabel": "Feet",
-            "Label": "",
+            "GroupLabel": "",
+            "Label": "What is your recent measured height in Feet?",
             "Index": 1,
             "QuestionType": "DropdownList"
           },
@@ -123,8 +122,7 @@ const questions = {
             ],
             "Validators": [],
             "GroupLabel": "",
-            "FieldLabel": "Inches",
-            "Label": "",
+            "Label": "What is your recent measured height in Inches?",
             "Index": 2,
             "QuestionType": "DropdownList"
           },
@@ -154,8 +152,7 @@ const questions = {
               }
             ],
             "GroupLabel": "",
-            "FieldLabel": "Pounds",
-            "Label": "What is your recent measured weight to the nearest digit?",
+            "Label": "What was your most recent measured Weight in lbs?",
             "Index": 3,
             "QuestionType": "Numeric"
           },
@@ -1029,552 +1026,275 @@ const questions = {
                   "GroupLabel": "",
                   "Label": "Which of the following best describes your usage?",
                   "Index": 21,
-                  "QuestionType": "RadioButton",
-                  "responsive": [
-                    {
-                      "relatedAnswer": "I am an occasional/social user",
-                      "Questions": [
-                        {
-                          "Id": "1021",
-                          "Orientation": "horizontal",
-                          "StepperLine": true,
-                          "ParentQuestionId": "",
-                          "ParentAnswerId": "",
-                          "SuggestedText": "Select",
-                          "QuestionGroupId": "3",
-                          "AdditionalText": "",
-                          "QuestionOrder": 22,
-                          "PossibleAnswers": [
-                            {
-                              "Id": "203",
-                              "AnswerString": "0 times",
-                              "AnswerIndex": 0,
-                              "AnswerTag": "203",
-                              "AnswerType": "REPORTING_HRA_ANSWER_ID"
-                            },
-                            {
-                              "Id": "204",
-                              "AnswerString": "1-5 times",
-                              "AnswerIndex": 1,
-                              "AnswerTag": "Tobacco_1",
-                              "AnswerType": "HQ_DEBIT"
-                            },
-                            {
-                              "Id": "205",
-                              "AnswerString": "6-10 times",
-                              "AnswerIndex": 2,
-                              "AnswerTag": "Tobacco_2",
-                              "AnswerType": "HQ_DEBIT"
-                            },
-                            {
-                              "Id": "206",
-                              "AnswerString": "11-15 times",
-                              "AnswerIndex": 3,
-                              "AnswerTag": "Tobacco_4",
-                              "AnswerType": "HQ_DEBIT"
-                            },
-                            {
-                              "Id": "207",
-                              "AnswerString": "More than 15 times",
-                              "AnswerIndex": 4,
-                              "AnswerTag": "Tobacco_5",
-                              "AnswerType": "HQ_DEBIT"
-                            }
-                          ],
-                          "Validators": [],
-                          "GroupLabel": "On an average day, how many times do you use the following products?",
-                          "SubLabel": "Smoke cigarettes",
-                          "Index": 22,
-                          "QuestionType": "RadioButton"
-                        },
-                        {
-                          "Id": "1022",
-                          "Orientation": "horizontal",
-                          "StepperLine": true,
-                          "ParentQuestionId": "",
-                          "ParentAnswerId": "",
-                          "SuggestedText": "Select",
-                          "QuestionGroupId": "3",
-                          "AdditionalText": "",
-                          "QuestionOrder": 23,
-                          "PossibleAnswers": [
-                            {
-                              "Id": "208",
-                              "AnswerString": "0 times",
-                              "AnswerIndex": 0,
-                              "AnswerTag": "208",
-                              "AnswerType": "REPORTING_HRA_ANSWER_ID"
-                            },
-                            {
-                              "Id": "209",
-                              "AnswerString": "1-5 times",
-                              "AnswerIndex": 1,
-                              "AnswerTag": "Tobacco_1",
-                              "AnswerType": "HQ_DEBIT"
-                            },
-                            {
-                              "Id": "210",
-                              "AnswerString": "6-10 times",
-                              "AnswerIndex": 2,
-                              "AnswerTag": "Tobacco_2",
-                              "AnswerType": "HQ_DEBIT"
-                            },
-                            {
-                              "Id": "211",
-                              "AnswerString": "11-15 times",
-                              "AnswerIndex": 3,
-                              "AnswerTag": "Tobacco_4",
-                              "AnswerType": "HQ_DEBIT"
-                            },
-                            {
-                              "Id": "212",
-                              "AnswerString": "More than 15 times",
-                              "AnswerIndex": 4,
-                              "AnswerTag": "Tobacco_5",
-                              "AnswerType": "HQ_DEBIT"
-                            }
-                          ],
-                          "Validators": [],
-                          "GroupLabel": "On an average day, how many times do you use the following products?",
-                          "SubLabel": "Smoke e-cigarettes",
-                          "Index": 23,
-                          "QuestionType": "RadioButton"
-                        },
-                        {
-                          "Id": "1023",
-                          "Orientation": "horizontal",
-                          "StepperLine": true,
-                          "ParentQuestionId": "",
-                          "ParentAnswerId": "",
-                          "SuggestedText": "Select",
-                          "QuestionGroupId": "3",
-                          "AdditionalText": "",
-                          "QuestionOrder": 24,
-                          "PossibleAnswers": [
-                            {
-                              "Id": "213",
-                              "AnswerString": "0 times",
-                              "AnswerIndex": 0,
-                              "AnswerTag": "213",
-                              "AnswerType": "REPORTING_HRA_ANSWER_ID"
-                            },
-                            {
-                              "Id": "214",
-                              "AnswerString": "1-5 times",
-                              "AnswerIndex": 1,
-                              "AnswerTag": "Tobacco_1",
-                              "AnswerType": "HQ_DEBIT"
-                            },
-                            {
-                              "Id": "215",
-                              "AnswerString": "6-10 times",
-                              "AnswerIndex": 2,
-                              "AnswerTag": "Tobacco_2",
-                              "AnswerType": "HQ_DEBIT"
-                            },
-                            {
-                              "Id": "216",
-                              "AnswerString": "11-15 times",
-                              "AnswerIndex": 3,
-                              "AnswerTag": "Tobacco_4",
-                              "AnswerType": "HQ_DEBIT"
-                            },
-                            {
-                              "Id": "217",
-                              "AnswerString": "More than 15 times",
-                              "AnswerIndex": 4,
-                              "AnswerTag": "Tobacco_5",
-                              "AnswerType": "HQ_DEBIT"
-                            }
-                          ],
-                          "Validators": [],
-                          "GroupLabel": "On an average day, how many times do you use the following products?",
-                          "SubLabel": "Smoke cigars",
-                          "Index": 24,
-                          "QuestionType": "RadioButton"
-                        },
-                        {
-                          "Id": "1024",
-                          "Orientation": "horizontal",
-                          "StepperLine": true,
-                          "ParentQuestionId": "",
-                          "ParentAnswerId": "",
-                          "SuggestedText": "Select",
-                          "QuestionGroupId": "3",
-                          "AdditionalText": "",
-                          "QuestionOrder": 25,
-                          "PossibleAnswers": [
-                            {
-                              "Id": "218",
-                              "AnswerString": "0 times",
-                              "AnswerIndex": 0,
-                              "AnswerTag": "218",
-                              "AnswerType": "REPORTING_HRA_ANSWER_ID"
-                            },
-                            {
-                              "Id": "219",
-                              "AnswerString": "1-5 times",
-                              "AnswerIndex": 1,
-                              "AnswerTag": "Tobacco_1",
-                              "AnswerType": "HQ_DEBIT"
-                            },
-                            {
-                              "Id": "220",
-                              "AnswerString": "6-10 times",
-                              "AnswerIndex": 2,
-                              "AnswerTag": "Tobacco_2",
-                              "AnswerType": "HQ_DEBIT"
-                            },
-                            {
-                              "Id": "221",
-                              "AnswerString": "11-15 times",
-                              "AnswerIndex": 3,
-                              "AnswerTag": "Tobacco_4",
-                              "AnswerType": "HQ_DEBIT"
-                            },
-                            {
-                              "Id": "222",
-                              "AnswerString": "More than 15 times",
-                              "AnswerIndex": 4,
-                              "AnswerTag": "Tobacco_5",
-                              "AnswerType": "HQ_DEBIT"
-                            }
-                          ],
-                          "Validators": [],
-                          "GroupLabel": "On an average day, how many times do you use the following products?",
-                          "SubLabel": "Use smokeless tobacco",
-                          "Index": 25,
-                          "QuestionType": "RadioButton"
-                        },
-                        {
-                          "Id": "1025",
-                          "Orientation": "horizontal",
-                          "StepperLine": true,
-                          "ParentQuestionId": "",
-                          "ParentAnswerId": "",
-                          "SuggestedText": "Select",
-                          "QuestionGroupId": "3",
-                          "AdditionalText": "",
-                          "QuestionOrder": 26,
-                          "PossibleAnswers": [
-                            {
-                              "Id": "223",
-                              "AnswerString": "0 times",
-                              "AnswerIndex": 0,
-                              "AnswerTag": "223",
-                              "AnswerType": "REPORTING_HRA_ANSWER_ID"
-                            },
-                            {
-                              "Id": "224",
-                              "AnswerString": "1-5 times",
-                              "AnswerIndex": 1,
-                              "AnswerTag": "Tobacco_1",
-                              "AnswerType": "HQ_DEBIT"
-                            },
-                            {
-                              "Id": "225",
-                              "AnswerString": "6-10 times",
-                              "AnswerIndex": 2,
-                              "AnswerTag": "Tobacco_2",
-                              "AnswerType": "HQ_DEBIT"
-                            },
-                            {
-                              "Id": "226",
-                              "AnswerString": "11-15 times",
-                              "AnswerIndex": 3,
-                              "AnswerTag": "Tobacco_4",
-                              "AnswerType": "HQ_DEBIT"
-                            },
-                            {
-                              "Id": "227",
-                              "AnswerString": "More than 15 times",
-                              "AnswerIndex": 4,
-                              "AnswerTag": "Tobacco_5",
-                              "AnswerType": "HQ_DEBIT"
-                            }
-                          ],
-                          "Validators": [],
-                          "GroupLabel": "On an average day, how many times do you use the following products?",
-                          "SubLabel": "Smoke a pipe",
-                          "Index": 26,
-                          "QuestionType": "RadioButton"
-                        }
-                      ]
-                    },
-                    {
-                      "relatedAnswer": "I currently use",
-                      "Questions": [
-                        {
-                          "Id": "1021",
-                          "Orientation": "horizontal",
-                          "StepperLine": true,
-                          "ParentQuestionId": "",
-                          "ParentAnswerId": "",
-                          "SuggestedText": "Select",
-                          "QuestionGroupId": "3",
-                          "AdditionalText": "",
-                          "QuestionOrder": 22,
-                          "PossibleAnswers": [
-                            {
-                              "Id": "203",
-                              "AnswerString": "0 times",
-                              "AnswerIndex": 0,
-                              "AnswerTag": "203",
-                              "AnswerType": "REPORTING_HRA_ANSWER_ID"
-                            },
-                            {
-                              "Id": "204",
-                              "AnswerString": "1-5 times",
-                              "AnswerIndex": 1,
-                              "AnswerTag": "Tobacco_1",
-                              "AnswerType": "HQ_DEBIT"
-                            },
-                            {
-                              "Id": "205",
-                              "AnswerString": "6-10 times",
-                              "AnswerIndex": 2,
-                              "AnswerTag": "Tobacco_2",
-                              "AnswerType": "HQ_DEBIT"
-                            },
-                            {
-                              "Id": "206",
-                              "AnswerString": "11-15 times",
-                              "AnswerIndex": 3,
-                              "AnswerTag": "Tobacco_4",
-                              "AnswerType": "HQ_DEBIT"
-                            },
-                            {
-                              "Id": "207",
-                              "AnswerString": "More than 15 times",
-                              "AnswerIndex": 4,
-                              "AnswerTag": "Tobacco_5",
-                              "AnswerType": "HQ_DEBIT"
-                            }
-                          ],
-                          "Validators": [],
-                          "GroupLabel": "On an average day, how many times do you use the following products?",
-                          "SubLabel": "Smoke cigarettes",
-                          "Index": 22,
-                          "QuestionType": "RadioButton"
-                        },
-                        {
-                          "Id": "1022",
-                          "Orientation": "horizontal",
-                          "StepperLine": true,
-                          "ParentQuestionId": "",
-                          "ParentAnswerId": "",
-                          "SuggestedText": "Select",
-                          "QuestionGroupId": "3",
-                          "AdditionalText": "",
-                          "QuestionOrder": 23,
-                          "PossibleAnswers": [
-                            {
-                              "Id": "208",
-                              "AnswerString": "0 times",
-                              "AnswerIndex": 0,
-                              "AnswerTag": "208",
-                              "AnswerType": "REPORTING_HRA_ANSWER_ID"
-                            },
-                            {
-                              "Id": "209",
-                              "AnswerString": "1-5 times",
-                              "AnswerIndex": 1,
-                              "AnswerTag": "Tobacco_1",
-                              "AnswerType": "HQ_DEBIT"
-                            },
-                            {
-                              "Id": "210",
-                              "AnswerString": "6-10 times",
-                              "AnswerIndex": 2,
-                              "AnswerTag": "Tobacco_2",
-                              "AnswerType": "HQ_DEBIT"
-                            },
-                            {
-                              "Id": "211",
-                              "AnswerString": "11-15 times",
-                              "AnswerIndex": 3,
-                              "AnswerTag": "Tobacco_4",
-                              "AnswerType": "HQ_DEBIT"
-                            },
-                            {
-                              "Id": "212",
-                              "AnswerString": "More than 15 times",
-                              "AnswerIndex": 4,
-                              "AnswerTag": "Tobacco_5",
-                              "AnswerType": "HQ_DEBIT"
-                            }
-                          ],
-                          "Validators": [],
-                          "GroupLabel": "On an average day, how many times do you use the following products?",
-                          "SubLabel": "Smoke e-cigarettes",
-                          "Index": 23,
-                          "QuestionType": "RadioButton"
-                        },
-                        {
-                          "Id": "1023",
-                          "Orientation": "horizontal",
-                          "StepperLine": true,
-                          "ParentQuestionId": "",
-                          "ParentAnswerId": "",
-                          "SuggestedText": "Select",
-                          "QuestionGroupId": "3",
-                          "AdditionalText": "",
-                          "QuestionOrder": 24,
-                          "PossibleAnswers": [
-                            {
-                              "Id": "213",
-                              "AnswerString": "0 times",
-                              "AnswerIndex": 0,
-                              "AnswerTag": "213",
-                              "AnswerType": "REPORTING_HRA_ANSWER_ID"
-                            },
-                            {
-                              "Id": "214",
-                              "AnswerString": "1-5 times",
-                              "AnswerIndex": 1,
-                              "AnswerTag": "Tobacco_1",
-                              "AnswerType": "HQ_DEBIT"
-                            },
-                            {
-                              "Id": "215",
-                              "AnswerString": "6-10 times",
-                              "AnswerIndex": 2,
-                              "AnswerTag": "Tobacco_2",
-                              "AnswerType": "HQ_DEBIT"
-                            },
-                            {
-                              "Id": "216",
-                              "AnswerString": "11-15 times",
-                              "AnswerIndex": 3,
-                              "AnswerTag": "Tobacco_4",
-                              "AnswerType": "HQ_DEBIT"
-                            },
-                            {
-                              "Id": "217",
-                              "AnswerString": "More than 15 times",
-                              "AnswerIndex": 4,
-                              "AnswerTag": "Tobacco_5",
-                              "AnswerType": "HQ_DEBIT"
-                            }
-                          ],
-                          "Validators": [],
-                          "GroupLabel": "On an average day, how many times do you use the following products?",
-                          "SubLabel": "Smoke cigars",
-                          "Index": 24,
-                          "QuestionType": "RadioButton"
-                        },
-                        {
-                          "Id": "1024",
-                          "Orientation": "horizontal",
-                          "StepperLine": true,
-                          "ParentQuestionId": "",
-                          "ParentAnswerId": "",
-                          "SuggestedText": "Select",
-                          "QuestionGroupId": "3",
-                          "AdditionalText": "",
-                          "QuestionOrder": 25,
-                          "PossibleAnswers": [
-                            {
-                              "Id": "218",
-                              "AnswerString": "0 times",
-                              "AnswerIndex": 0,
-                              "AnswerTag": "218",
-                              "AnswerType": "REPORTING_HRA_ANSWER_ID"
-                            },
-                            {
-                              "Id": "219",
-                              "AnswerString": "1-5 times",
-                              "AnswerIndex": 1,
-                              "AnswerTag": "Tobacco_1",
-                              "AnswerType": "HQ_DEBIT"
-                            },
-                            {
-                              "Id": "220",
-                              "AnswerString": "6-10 times",
-                              "AnswerIndex": 2,
-                              "AnswerTag": "Tobacco_2",
-                              "AnswerType": "HQ_DEBIT"
-                            },
-                            {
-                              "Id": "221",
-                              "AnswerString": "11-15 times",
-                              "AnswerIndex": 3,
-                              "AnswerTag": "Tobacco_4",
-                              "AnswerType": "HQ_DEBIT"
-                            },
-                            {
-                              "Id": "222",
-                              "AnswerString": "More than 15 times",
-                              "AnswerIndex": 4,
-                              "AnswerTag": "Tobacco_5",
-                              "AnswerType": "HQ_DEBIT"
-                            }
-                          ],
-                          "Validators": [],
-                          "GroupLabel": "On an average day, how many times do you use the following products?",
-                          "SubLabel": "Use smokeless tobacco",
-                          "Index": 25,
-                          "QuestionType": "RadioButton"
-                        },
-                        {
-                          "Id": "1025",
-                          "Orientation": "horizontal",
-                          "StepperLine": true,
-                          "ParentQuestionId": "",
-                          "ParentAnswerId": "",
-                          "SuggestedText": "Select",
-                          "QuestionGroupId": "3",
-                          "AdditionalText": "",
-                          "QuestionOrder": 26,
-                          "PossibleAnswers": [
-                            {
-                              "Id": "223",
-                              "AnswerString": "0 times",
-                              "AnswerIndex": 0,
-                              "AnswerTag": "223",
-                              "AnswerType": "REPORTING_HRA_ANSWER_ID"
-                            },
-                            {
-                              "Id": "224",
-                              "AnswerString": "1-5 times",
-                              "AnswerIndex": 1,
-                              "AnswerTag": "Tobacco_1",
-                              "AnswerType": "HQ_DEBIT"
-                            },
-                            {
-                              "Id": "225",
-                              "AnswerString": "6-10 times",
-                              "AnswerIndex": 2,
-                              "AnswerTag": "Tobacco_2",
-                              "AnswerType": "HQ_DEBIT"
-                            },
-                            {
-                              "Id": "226",
-                              "AnswerString": "11-15 times",
-                              "AnswerIndex": 3,
-                              "AnswerTag": "Tobacco_4",
-                              "AnswerType": "HQ_DEBIT"
-                            },
-                            {
-                              "Id": "227",
-                              "AnswerString": "More than 15 times",
-                              "AnswerIndex": 4,
-                              "AnswerTag": "Tobacco_5",
-                              "AnswerType": "HQ_DEBIT"
-                            }
-                          ],
-                          "Validators": [],
-                          "GroupLabel": "On an average day, how many times do you use the following products?",
-                          "SubLabel": "Smoke a pipe",
-                          "Index": 26,
-                          "QuestionType": "RadioButton"
-                        }
-                      ]
-                    }
-                  ]
+                  "QuestionType": "RadioButton"
                 }
               }
             ]
+          },
+          {
+            "Id": "1021",
+            "Orientation": "horizontal",
+            "StepperLine": true,
+            "ParentQuestionId": "",
+            "ParentAnswerId": "",
+            "SuggestedText": "Select",
+            "QuestionGroupId": "3",
+            "AdditionalText": "",
+            "QuestionOrder": 22,
+            "PossibleAnswers": [
+              {
+                "Id": "203",
+                "AnswerString": "0 times",
+                "AnswerIndex": 0,
+                "AnswerTag": "203",
+                "AnswerType": "REPORTING_HRA_ANSWER_ID"
+              },
+              {
+                "Id": "204",
+                "AnswerString": "1-5 times",
+                "AnswerIndex": 1,
+                "AnswerTag": "Tobacco_1",
+                "AnswerType": "HQ_DEBIT"
+              },
+              {
+                "Id": "205",
+                "AnswerString": "6-10 times",
+                "AnswerIndex": 2,
+                "AnswerTag": "Tobacco_2",
+                "AnswerType": "HQ_DEBIT"
+              },
+              {
+                "Id": "206",
+                "AnswerString": "11-15 times",
+                "AnswerIndex": 3,
+                "AnswerTag": "Tobacco_4",
+                "AnswerType": "HQ_DEBIT"
+              },
+              {
+                "Id": "207",
+                "AnswerString": "More than 15 times",
+                "AnswerIndex": 4,
+                "AnswerTag": "Tobacco_5",
+                "AnswerType": "HQ_DEBIT"
+              }
+            ],
+            "Validators": [],
+            "GroupLabel": "On an average day, how many times do you use the following products?",
+            "SubLabel": "Smoke cigarettes",
+            "Index": 22,
+            "QuestionType": "RadioButton"
+          },
+          {
+            "Id": "1022",
+            "Orientation": "horizontal",
+            "StepperLine": true,
+            "ParentQuestionId": "",
+            "ParentAnswerId": "",
+            "SuggestedText": "Select",
+            "QuestionGroupId": "3",
+            "AdditionalText": "",
+            "QuestionOrder": 23,
+            "PossibleAnswers": [
+              {
+                "Id": "208",
+                "AnswerString": "0 times",
+                "AnswerIndex": 0,
+                "AnswerTag": "208",
+                "AnswerType": "REPORTING_HRA_ANSWER_ID"
+              },
+              {
+                "Id": "209",
+                "AnswerString": "1-5 times",
+                "AnswerIndex": 1,
+                "AnswerTag": "Tobacco_1",
+                "AnswerType": "HQ_DEBIT"
+              },
+              {
+                "Id": "210",
+                "AnswerString": "6-10 times",
+                "AnswerIndex": 2,
+                "AnswerTag": "Tobacco_2",
+                "AnswerType": "HQ_DEBIT"
+              },
+              {
+                "Id": "211",
+                "AnswerString": "11-15 times",
+                "AnswerIndex": 3,
+                "AnswerTag": "Tobacco_4",
+                "AnswerType": "HQ_DEBIT"
+              },
+              {
+                "Id": "212",
+                "AnswerString": "More than 15 times",
+                "AnswerIndex": 4,
+                "AnswerTag": "Tobacco_5",
+                "AnswerType": "HQ_DEBIT"
+              }
+            ],
+            "Validators": [],
+            "GroupLabel": "On an average day, how many times do you use the following products?",
+            "SubLabel": "Smoke e-cigarettes",
+            "Index": 23,
+            "QuestionType": "RadioButton"
+          },
+          {
+            "Id": "1023",
+            "Orientation": "horizontal",
+            "StepperLine": true,
+            "ParentQuestionId": "",
+            "ParentAnswerId": "",
+            "SuggestedText": "Select",
+            "QuestionGroupId": "3",
+            "AdditionalText": "",
+            "QuestionOrder": 24,
+            "PossibleAnswers": [
+              {
+                "Id": "213",
+                "AnswerString": "0 times",
+                "AnswerIndex": 0,
+                "AnswerTag": "213",
+                "AnswerType": "REPORTING_HRA_ANSWER_ID"
+              },
+              {
+                "Id": "214",
+                "AnswerString": "1-5 times",
+                "AnswerIndex": 1,
+                "AnswerTag": "Tobacco_1",
+                "AnswerType": "HQ_DEBIT"
+              },
+              {
+                "Id": "215",
+                "AnswerString": "6-10 times",
+                "AnswerIndex": 2,
+                "AnswerTag": "Tobacco_2",
+                "AnswerType": "HQ_DEBIT"
+              },
+              {
+                "Id": "216",
+                "AnswerString": "11-15 times",
+                "AnswerIndex": 3,
+                "AnswerTag": "Tobacco_4",
+                "AnswerType": "HQ_DEBIT"
+              },
+              {
+                "Id": "217",
+                "AnswerString": "More than 15 times",
+                "AnswerIndex": 4,
+                "AnswerTag": "Tobacco_5",
+                "AnswerType": "HQ_DEBIT"
+              }
+            ],
+            "Validators": [],
+            "GroupLabel": "On an average day, how many times do you use the following products?",
+            "SubLabel": "Smoke cigars",
+            "Index": 24,
+            "QuestionType": "RadioButton"
+          },
+          {
+            "Id": "1024",
+            "Orientation": "horizontal",
+            "StepperLine": true,
+            "ParentQuestionId": "",
+            "ParentAnswerId": "",
+            "SuggestedText": "Select",
+            "QuestionGroupId": "3",
+            "AdditionalText": "",
+            "QuestionOrder": 25,
+            "PossibleAnswers": [
+              {
+                "Id": "218",
+                "AnswerString": "0 times",
+                "AnswerIndex": 0,
+                "AnswerTag": "218",
+                "AnswerType": "REPORTING_HRA_ANSWER_ID"
+              },
+              {
+                "Id": "219",
+                "AnswerString": "1-5 times",
+                "AnswerIndex": 1,
+                "AnswerTag": "Tobacco_1",
+                "AnswerType": "HQ_DEBIT"
+              },
+              {
+                "Id": "220",
+                "AnswerString": "6-10 times",
+                "AnswerIndex": 2,
+                "AnswerTag": "Tobacco_2",
+                "AnswerType": "HQ_DEBIT"
+              },
+              {
+                "Id": "221",
+                "AnswerString": "11-15 times",
+                "AnswerIndex": 3,
+                "AnswerTag": "Tobacco_4",
+                "AnswerType": "HQ_DEBIT"
+              },
+              {
+                "Id": "222",
+                "AnswerString": "More than 15 times",
+                "AnswerIndex": 4,
+                "AnswerTag": "Tobacco_5",
+                "AnswerType": "HQ_DEBIT"
+              }
+            ],
+            "Validators": [],
+            "GroupLabel": "On an average day, how many times do you use the following products?",
+            "SubLabel": "Use smokeless tobacco",
+            "Index": 25,
+            "QuestionType": "RadioButton"
+          },
+          {
+            "Id": "1025",
+            "Orientation": "horizontal",
+            "StepperLine": true,
+            "ParentQuestionId": "",
+            "ParentAnswerId": "",
+            "SuggestedText": "Select",
+            "QuestionGroupId": "3",
+            "AdditionalText": "",
+            "QuestionOrder": 26,
+            "PossibleAnswers": [
+              {
+                "Id": "223",
+                "AnswerString": "0 times",
+                "AnswerIndex": 0,
+                "AnswerTag": "223",
+                "AnswerType": "REPORTING_HRA_ANSWER_ID"
+              },
+              {
+                "Id": "224",
+                "AnswerString": "1-5 times",
+                "AnswerIndex": 1,
+                "AnswerTag": "Tobacco_1",
+                "AnswerType": "HQ_DEBIT"
+              },
+              {
+                "Id": "225",
+                "AnswerString": "6-10 times",
+                "AnswerIndex": 2,
+                "AnswerTag": "Tobacco_2",
+                "AnswerType": "HQ_DEBIT"
+              },
+              {
+                "Id": "226",
+                "AnswerString": "11-15 times",
+                "AnswerIndex": 3,
+                "AnswerTag": "Tobacco_4",
+                "AnswerType": "HQ_DEBIT"
+              },
+              {
+                "Id": "227",
+                "AnswerString": "More than 15 times",
+                "AnswerIndex": 4,
+                "AnswerTag": "Tobacco_5",
+                "AnswerType": "HQ_DEBIT"
+              }
+            ],
+            "Validators": [],
+            "GroupLabel": "On an average day, how many times do you use the following products?",
+            "SubLabel": "Smoke a pipe",
+            "Index": 26,
+            "QuestionType": "RadioButton"
           }
         ]
       },
@@ -2438,7 +2158,7 @@ const questions = {
             ],
             "Validators": [],
             "GroupLabel": "In the past year, have you had any serious problems with the following?",
-            "Label": "Divorce/separation",
+            "Label": "Divorce/Separation",
             "Index": 46,
             "QuestionType": "Checkbox"
           },
@@ -2858,6 +2578,5 @@ const questions = {
     ]
   }
 }
-
 
 export {questions};
